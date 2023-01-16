@@ -1,0 +1,35 @@
+﻿@model Proje.Models.Entities.Kategori
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+<div class="content-wrapper">
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+        <div class="card mb-4">
+            <h5 class="card-header">Referanslar - Ekle</h5>
+            <div class="card-body">
+                <form enctype="multipart/form-data" method="post" asp-controller="Admin" asp-action="KategoriDuzenle">
+                    <input asp-for="Id"  type="hidden" name="Id" />
+                    <div class="form-floating mb-3">
+                        <input asp-for="KategoriAdi" type="text" class="form-control" name="KategoriAdi" id="KategoriAdi" aria-describedby="floatingInputHelp" placeholder=" " required>
+                        <label for="KategoriAdi">Kategori Adı</label>
+
+                    </div>
+
+                    <div class="text-center row">
+                        <div class="col-md-10">  <button type="submit" class="btn rounded-pill btn-dark w-100 mb-3">Kaydet</button></div>
+
+                        <div class="col-md-2">
+                            <a class="btn rounded-pill btn-secondary w-100" asp-controller="Admin" asp-action="Kategoriler">Vazgeç</a>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

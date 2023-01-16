@@ -1,0 +1,38 @@
+﻿@model Proje.Models.IndexViewModel
+@{
+    var data = Model.Abouts.ElementAt(0);
+}
+<section id="about" class="about">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-5 align-items-stretch video-box" style='background-image: url("assets/img/@data.Image");'>
+                <a href="@data.YoutubeLink" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            </div>
+
+            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+
+                <div class="content">
+                    <h3>@data.Baslik</h3>
+                    <p>
+                        @data.Aciklama1
+                    </p>
+                    <p class="fst-italic">
+                        @data.Aciklama2
+                    </p>
+                    <ul>
+                        <li><i class="bx bx-check-double"></i> @data.Madde1</li>
+                        <li><i class="bx bx-check-double"></i> @data.Madde2</li>
+                        <li><i class="bx bx-check-double"></i> @data.Madde3</li>
+                    </ul>
+                    <p>
+                        @data.Aciklama3
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End About Section -->

@@ -1,0 +1,64 @@
+﻿@model Proje.Models.IndexViewModel
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+<div class="container-xxl flex-grow-1 container-p-y">
+
+    <div class="card">
+        <h5 style="    display: flex;
+    align-items: center;
+    justify-content: space-between;" class="card-header">
+            Etkinlikler<a asp-controller="Admin" asp-action="EventsEkle"><button class="btn rounded-pill btn-dark" style="width:120px;">Ekle</button></a>
+        </h5>
+        @if (TempData["Alert"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Alert"]
+            </div>
+        }
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fotoğraf</th>
+                        <th>Başlık</th>
+                        <th>Fiyat</th>
+                        <th>Açıklama1</th>
+                        <th>Madde1</th>
+                        <th>Madde2</th>
+                        <th>Madde3</th>
+                        <th>Açıklama2</th>
+                        <th>Düzenle/Sil</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @foreach (var item in Model.Events)
+                    {
+                        <tr>
+                            <td><img src="~/assets/img/@item.Image" style="max-width:150px;"></td>
+                            <td>@item.Baslik</td>
+                            <td>@item.Fiyat</td>
+                            <td>@item.Aciklama1</td>
+                            <td>@item.Madde1</td>
+                            <td>@item.Madde2</td>
+                            <td>@item.Madde3</td>
+                            <td>@item.Aciklama2</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-controller="Admin" asp-action="EventsDuzenle" asp-route-id="@item.Id"><i class="bx bx-edit-alt me-1"></i>Düzenle</a>
+                                        <a class="dropdown-item" asp-controller="Admin" asp-action="EventsSil" asp-route-id="@item.Id"><i class="bx bx-trash me-1"></i>Sil</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

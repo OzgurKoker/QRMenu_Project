@@ -1,0 +1,51 @@
+﻿@model Proje.Models.IndexViewModel
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+<div class="container-xxl flex-grow-1 container-p-y">
+
+    <div class="card">
+        <h5 style="    display: flex;
+    align-items: center;
+    justify-content: space-between;" class="card-header">
+            Galeri <a asp-controller="Admin" asp-action="GalleryEkle"><button class="btn rounded-pill btn-dark" style="width:120px;">Ekle</button></a>
+        </h5>
+                @if (TempData["Alert"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Alert"]
+            </div>
+        }
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fotoğraf</th>
+                        <th>Düzenle/Sil</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @foreach (var item in Model.Gallerys)
+                    {
+                        <tr>
+                            <td><img src="~/assets/img/gallery/@item.Image" style="max-width:250px;"></td>
+
+                            <td>
+                                <div class="dropdown">
+                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" asp-controller="Admin" asp-action="GalleryDuzenle" asp-route-id="@item.Id"><i class="bx bx-edit-alt me-1"></i>Düzenle</a>
+                                        <a class="dropdown-item" asp-controller="Admin" asp-action="GallerySil" asp-route-id="@item.Id"><i class="bx bx-trash me-1"></i>Sil</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

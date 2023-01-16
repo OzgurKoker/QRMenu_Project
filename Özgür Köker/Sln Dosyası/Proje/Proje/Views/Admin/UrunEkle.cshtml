@@ -1,0 +1,47 @@
+﻿@model Proje.Models.IndexViewModel
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+        <div class="card mb-4">
+            <h5 class="card-header">Ürünler - Ekle</h5>
+            <div class="card-body">
+                <form enctype="multipart/form-data" method="post" asp-controller="Admin" asp-action="UrunEkle">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="UrunAdi" id="UrunAdi" aria-describedby="floatingInputHelp" placeholder=" " required>
+                        <label for="UrunAdi">Ürün Adı</label>
+                    </div>
+                   
+                    <select class="form-select mb-3" id="exampleFormControlSelect1" name="UrunKategoriId" aria-label="Default select example" required>
+                        @foreach (var ktg in Model.Kategoris)
+                        {
+                            <option  value="@ktg.Id">@ktg.KategoriAdi</option>
+                        }
+                    </select>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="UrunAciklama" id="UrunAciklama" aria-describedby="floatingInputHelp" placeholder=" " >
+                        <label for="UrunAciklama">Ürün Açıklaması</label>
+
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" name="UrunFiyat" id="UrunFiyat" aria-describedby="floatingInputHelp" placeholder=" " required>
+                        <label for="UrunFiyat">Ürün Fiyatı</label>
+
+                    </div>
+                    <div class="text-center row">
+                        <div class="col-md-10">  <button type="submit" class="btn rounded-pill btn-dark w-100 mb-3">Kaydet</button></div>
+
+                        <div class="col-md-2">
+                            <a class="btn rounded-pill btn-secondary w-100" asp-controller="Admin" asp-action="Urunler">Vazgeç</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

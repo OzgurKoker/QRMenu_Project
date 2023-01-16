@@ -1,0 +1,40 @@
+﻿@model Proje.Models.IndexViewModel
+@{
+    var data = Model.Titles.ElementAt(0);
+}
+<section id="chefs" class="chefs">
+    <div class="container">
+
+        <div class="section-title">
+            <h2> <span>@data.ChefsBaslik</span></h2>
+            <p>@data.ChefsAciklama</p>
+        </div>
+
+        <div class="row">
+
+            @foreach (var item in Model.Chefs)
+            {
+                
+           
+            <div class="col-lg-4 col-md-6">
+                <div class="member">
+                    <div class="pic"><img src="~/assets/img/chefs/@item.Image" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>@item.Name</h4>
+                        <span>@item.Title</span>
+                        <div class="social">
+                            <a href="@item.Twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="@item.Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="@item.Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="@item.Linkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+     
+
+        </div>
+
+    </div>
+</section><!-- End Chefs Section -->

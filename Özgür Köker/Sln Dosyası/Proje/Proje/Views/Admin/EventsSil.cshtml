@@ -1,0 +1,40 @@
+﻿@model Proje.Models.Entities.Event
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="col-md-6 col-lg-4 mb-3">
+        <div class="card h-100">
+            <form method="post" asp-controller="Admin" asp-action="EventsSil">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="Baslik" />
+                <input type="hidden" asp-for="Aciklama1" />
+                <input type="hidden" asp-for="Aciklama2" />
+                <input type="hidden" asp-for="Image" />
+                <input type="hidden" asp-for="Madde1" />
+                <input type="hidden" asp-for="Madde2" />
+                <input type="hidden" asp-for="Madde3" />
+                <input type="hidden" asp-for="Fiyat" />
+                <img class="card-img-top" src="~/assets/img/@Model.Image">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Baslik</h5>
+                    <p class="card-text">
+                        @Model.Aciklama1
+                    </p>
+                    <h6 class="card-title">@Model.Madde1</h6>
+                    <h6 class="card-title">@Model.Madde2</h6>
+                    <h6 class="card-title">@Model.Madde3</h6>
+                    <p class="card-text">
+                        @Model.Aciklama2
+                    </p>
+                    <h5 class="alert alert-danger">Yukarıda Bilgileri Verilen İçeriği Silmek İstiyor Musunuz ?</h5>
+                    <a asp-action="Events" asp-controller="Admin" class="btn rounded-pill btn-dark">Vazgeç</a>
+                    <button type="submit" class="btn rounded-pill btn-danger">Sil</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
