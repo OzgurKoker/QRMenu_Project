@@ -1,0 +1,23 @@
+﻿@model Proje.Models.Entities.Gallery
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="col-md-6 col-lg-4 mb-3">
+        <div class="card h-100">
+            <form method="post" asp-controller="Admin" asp-action="GallerySil">
+                <input type="hidden" asp-for="Id" />
+            
+                <img class="card-img-top" src="~/assets/img/gallery/@Model.Image">
+                <div class="card-body">
+                    <h5 class="alert alert-danger">Yukarıda Bilgileri Verilen İçeriği Silmek İstiyor Musunuz ?</h5>
+                    <a asp-action="Gallery" asp-controller="Admin" class="btn rounded-pill btn-dark">Vazgeç</a>
+                    <button type="submit" class="btn rounded-pill btn-danger">Sil</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

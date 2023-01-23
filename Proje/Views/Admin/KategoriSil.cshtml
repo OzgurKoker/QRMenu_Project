@@ -1,0 +1,44 @@
+﻿@using Proje.Models.Entities;
+@model Proje.Models.Entities.Kategori
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="col-md-6 col-lg-4 mb-3">
+        <div class="card h-100">
+            <form method="post" asp-controller="Admin" asp-action="KategoriSil">
+                <input type="hidden" asp-for="Id" />
+                <div class="card-body">
+                    <h3 class="card-title"><strong>Kategori: </strong>@Model.KategoriAdi</h3>
+
+                    @if (Model.Uruns.Count > 0)
+                    {
+
+
+                        @foreach (var item in (IEnumerable<Urun>)ViewBag.urunler)
+                        {
+                           <hr/>
+                            <h5 class="card-title"><strong>Ürün Adı: </strong>@item.UrunAdi </h5>
+                            <h5 class="card-text"><strong>Açıklama: </strong>@item.UrunAciklama</h5>
+                            <h5><strong>Fiyat: </strong>@item.UrunFiyat ₺ </h5>
+
+                        }
+                    }
+                    else
+                    {
+                        <h5 class="alert alert-danger">Bu Kategoriye Ait Ürün Yok Yinede Silmek İstiyor Musunuz ?</h5>
+                    }
+
+
+                    @if (Model.Uruns.Count > 0)
+                    {
+                        <h5 class="alert alert-danger"><strong>@Model.KategoriAdi</strong> isimli kategoriyi içindeki <strong>@Model.Uruns.Count()</strong> Ürünle Birlikte Silmek İstiyor Musunuz ?</h5>
+                    }
+                    <a asp-action="Kategoriler" asp-controller="Admin" class="btn rounded-pill btn-dark">Vazgeç</a>
+                    <button type="submit" class="btn rounded-pill btn-danger">Sil</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

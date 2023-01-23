@@ -1,0 +1,55 @@
+﻿@model Proje.Models.Entities.Special
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+<div class="content-wrapper">
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+
+        <div class="card mb-4">
+            <h5 class="card-header">Spesiyaller - Düzenle</h5>
+
+            <div class="card-body">
+                <form enctype="multipart/form-data" method="post" asp-controller="Admin" asp-action="SpecialsDuzenle">
+                    <input type="hidden" asp-for="Id" name="Id" />
+
+                    <div class="text-center"><img style="max-width:300px;" src="~/assets/img/@Model.Image"></div>
+
+                    <input name="Foto" asp-for="Image" class="form-control mb-3 mt-3" type="file" id="Image">
+                    <div class="form-floating mb-3">
+                        <input asp-for="SpecialsNav.Baslik" type="text" class="form-control" name="SpecialsNav.Baslik" id="SpecialsNav.Baslik" aria-describedby="floatingInputHelp" placeholder=" " required>
+                        <label for="SpecialsNav.Baslik">Neden Biz ? - Başlık</label>
+
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Baslik" type="text" class="form-control" name="Baslik" id="Baslik" aria-describedby="floatingInputHelp" placeholder=" " required>
+                        <label for="Baslik">Neden Biz ? - Başlık</label>
+
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Aciklama1" type="text" class="form-control" name="Aciklama1" id="Aciklama1" aria-describedby="floatingInputHelp" placeholder=" " required>
+                        <label for="Aciklama1">Neden Biz ? - Başlık</label>
+
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Aciklama2" type="text" class="form-control" name="Aciklama2" id="Aciklama2" aria-describedby="floatingInputHelp" placeholder=" " required>
+                        <label for="Aciklama2">Neden Biz ? - Başlık</label>
+
+                    </div>
+
+                    <div class="text-center row">
+                        <div class="col-md-10">       <button type="submit" class="btn rounded-pill btn-dark w-100 mb-3">Kaydet</button></div>
+
+                        <div class="col-md-2">
+                            <a class="btn rounded-pill btn-secondary w-100" asp-controller="Admin" asp-action="Specials">Vazgeç</a>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
