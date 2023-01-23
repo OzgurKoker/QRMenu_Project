@@ -1,3 +1,0 @@
-ConnectionStringi değiştirmeden veritabanını kurmayacak
-Models/Entities/ProjeContext içinde ve
-appsettings.json içindeki connection stringi değiştirerek çalıştırabilirsiniz

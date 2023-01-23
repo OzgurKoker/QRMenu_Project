@@ -1,0 +1,35 @@
+﻿@model Proje.Models.IndexViewModel
+@{
+    var data = Model.Titles.ElementAt(0);
+}
+@if (Model.Gallerys.Count()>0)
+{
+    
+
+<section id="gallery" class="gallery">
+    <div class="container-fluid">
+
+        <div class="section-title">
+            <h2>@data.GalleryBaslik</h2>
+            <p>@data.GalleryAciklama</p>
+        </div>
+
+        <div class="row g-0">
+            @foreach (var item in Model.Gallerys)
+            {
+                
+           
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="~/assets/img/gallery/@item.Image" class="gallery-lightbox">
+                            <img src="~/assets/img/gallery/@item.Image" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            }
+
+        </div>
+
+    </div>
+</section><!-- End Gallery Section -->
+}
