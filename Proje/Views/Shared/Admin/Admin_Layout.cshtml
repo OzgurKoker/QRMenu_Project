@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html>
+<html lang="en"
+      class="light-style layout-menu-fixed"
+      dir="ltr"
+      data-theme="theme-default"
+      data-assets-path="~/adminassets/"
+      data-template="vertical-menu-template-free">
+@{
+    await Html.RenderPartialAsync("Admin/_head");
+}
+
+<body>
+
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+              @{
+                    await Html.RenderPartialAsync("Admin/_leftnav");
+                }
+     
+         
+            <div class="layout-page">
+             
+                @{
+                    await Html.RenderPartialAsync("Admin/_topnav");
+                }
+
+
+                <div class="content-wrapper">
+
+                    @RenderBody()
+
+
+                    @{
+                        await Html.RenderPartialAsync("Admin/_footer");
+                    }
+
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    @{
+        await Html.RenderPartialAsync("Admin/_scripts");
+    }
+
+</body>
+</html>

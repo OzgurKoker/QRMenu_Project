@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Paradise";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+@{
+    await Html.RenderPartialAsync("_head");
+}
+
+<body>
+    @{
+        await Html.RenderPartialAsync("_topbar");
+    }
+
+
+    @{
+        await Html.RenderPartialAsync("_header");
+    }
+
+    @{
+        await Html.RenderPartialAsync("_slider");
+    }
+    <main id="main">
+        @{
+            await Html.RenderPartialAsync("_about");
+        }
+        @{
+            await Html.RenderPartialAsync("_whyus");
+        }
+        @{
+            await Html.RenderPartialAsync("_specials");
+        }
+        @{
+            await Html.RenderPartialAsync("_events");
+        }
+        @*   @{
+        await Html.RenderPartialAsync("_booktable");
+        }*@
+
+        @{
+            await Html.RenderPartialAsync("_gallery");
+        }
+        @{
+            await Html.RenderPartialAsync("_chefs");
+        }
+        @{
+            await Html.RenderPartialAsync("_testimonials");
+        }
+        @{
+            await Html.RenderPartialAsync("_contact");
+        }
+        @{
+            await Html.RenderPartialAsync("_footer");
+        }
+
+    </main>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    @{
+        await Html.RenderPartialAsync("_scripts");
+    }
+</body>
+</html>

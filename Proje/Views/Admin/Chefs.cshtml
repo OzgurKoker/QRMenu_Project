@@ -1,0 +1,50 @@
+﻿@model Proje.Models.IndexViewModel
+@{
+    Layout = "~/Views/Shared/Admin/Admin_Layout.cshtml";
+
+}
+<div class="container-xxl flex-grow-1 container-p-y">
+
+    <div class="card">
+        <h5 class="card-header">Şefler</h5>
+                     @if (TempData["Alert"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["Alert"]
+            </div>
+        }
+        <div class="table-responsive text-nowrap">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fotoğraf</th>
+                        <th>Ad</th>
+                        <th>Unvan</th>
+                        <th>Twitter</th>
+                        <th>Facebook</th>
+                        <th>Instagram</th>
+                        <th>Linkedin</th>
+                        <th>Düzenle</th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @foreach (var item in Model.Chefs)
+                    {
+                        <tr>
+                            <td><img src="~/assets/img/chefs/@item.Image" style="max-width:150px;"></td>
+                            <td>@item.Name</td>
+                            <td>@item.Title</td>
+                            <td>@item.Twitter</td>
+                            <td>@item.Facebook</td>
+                            <td>@item.Instagram</td>
+                            <td>@item.Linkedin</td>
+                            <td>
+                                <a class="dropdown-item" asp-controller="Admin" asp-action="ChefsDuzenle" asp-route-id="@item.Id"><i class="bx bx-edit-alt me-1"></i>Düzenle</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
