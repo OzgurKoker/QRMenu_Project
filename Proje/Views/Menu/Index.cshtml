@@ -31,33 +31,30 @@
     <section id="menu" class="menu">
         <div class="container">
             <div class="section-title">
-                <h2>Paradise Cafe & Restaurant</h2>
+                <h2><span>Paradise Cafe & Restaurant</span></h2>
+        
             </div>
-            
-         
-      @*      <div class="row">
+
+
+            <div class="row mb-3">
                 <div class="col-lg-12 d-flex justify-content-center">
                     <ul id="menu-flters">
+                        <a asp-controller="Home" asp-action="Index">ev</a>
                         @foreach (var baslik in Model.Kategoris)
                         {
-
-                            <li><a href="#@baslik.KategoriAdi">@baslik.KategoriAdi</a></li>
-
+                            <a class=" " href="#@baslik.KategoriAdi">@baslik.KategoriAdi</a>
                         }
-                        <li class="filter-active">Show All</li>
-                        <li>Salads</li>
-                        <li>Specialty</li>
                     </ul>
                 </div>
-            </div>*@
+            </div>
 
 
 
             @foreach (var ktg in Model.Kategoris)
             {
+            
 
-                
-                <div class="section-title" >
+                <div class="section-title">
                     <h2 id="@ktg.KategoriAdi">@ktg.KategoriAdi</h2>
                 </div>
                 <div class="row menu-container" style="position: relative;">
@@ -65,7 +62,7 @@
                     {
                         <div class="col-lg-6 menu-item ">
                             <div class="menu-content">
-                                <a href="#">@item.UrunAdi</a><span>@item.UrunFiyat ₺</span>
+                                <a>@item.UrunAdi</a><span>@item.UrunFiyat ₺</span>
                             </div>
                             <div class="menu-ingredients">
                                 @item.UrunAciklama

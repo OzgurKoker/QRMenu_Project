@@ -16,8 +16,6 @@ namespace Proje.Models.Entities
         public string? ContactAciklama { get; set; }
         public string? ChefsBaslik { get; set; }
         public string? ChefsAciklama { get; set; }
-        public string? BooktableBaslik { get; set; }
-        public string? BooktableAciklama { get; set; }
         public string? EventsBaslik { get; set; }
     }
 }

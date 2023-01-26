@@ -38,7 +38,8 @@ namespace Proje.Models.Entities
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("server=localhost; uid=sa; password=1234; database=Proje; trustServerCertificate=true");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("server=DESKTOP-4EDFQLT; uid=sa; password=1234; database=Proje; trustServerCertificate=true");
             }
         }
 
@@ -324,6 +325,8 @@ namespace Proje.Models.Entities
 
             modelBuilder.Entity<Special>(entity =>
             {
+                entity.HasIndex(e => e.SpecialsNavId, "IX_Specials_Specials_nav_id");
+
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Aciklama1)
@@ -402,14 +405,6 @@ namespace Proje.Models.Entities
             {
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.BooktableAciklama)
-                    .HasMaxLength(200)
-                    .HasColumnName("Booktable_aciklama");
-
-                entity.Property(e => e.BooktableBaslik)
-                    .HasMaxLength(100)
-                    .HasColumnName("Booktable_baslik");
-
                 entity.Property(e => e.ChefsAciklama)
                     .HasMaxLength(200)
                     .HasColumnName("Chefs_aciklama");
@@ -481,6 +476,8 @@ namespace Proje.Models.Entities
             modelBuilder.Entity<Urun>(entity =>
             {
                 entity.ToTable("Urun");
+
+                entity.HasIndex(e => e.UrunKategoriId, "IX_Urun_Urun_Kategori_id");
 
                 entity.Property(e => e.Id).HasColumnName("id");
 

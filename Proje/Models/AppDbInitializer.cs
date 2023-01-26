@@ -391,8 +391,8 @@ namespace Proje.Models
                           ContactAciklama="Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.",
                           ChefsBaslik="Delicious",
                           ChefsAciklama="Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.",
-                          BooktableBaslik="Book a Table",
-                          BooktableAciklama="Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.",
+                          //BooktableBaslik="Book a Table",
+                          //BooktableAciklama="Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.",
                           EventsBaslik="Merhaba bu bir deneme başlığıdır"
                         },
 

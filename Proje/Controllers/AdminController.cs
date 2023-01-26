@@ -43,8 +43,8 @@ namespace Proje.Controllers
             title.ChefsAciklama = p.ChefsAciklama;
             title.ChefsBaslik = p.ChefsBaslik;
             title.WhyUsBaslik = p.WhyUsBaslik;
-            title.BooktableAciklama = p.BooktableAciklama;
-            title.BooktableBaslik = p.BooktableBaslik;
+            //title.BooktableAciklama = p.BooktableAciklama;
+            //title.BooktableBaslik = p.BooktableBaslik;
             title.ContactAciklama = p.ContactAciklama;
             title.ContactBaslik = p.ContactBaslik;
             title.GalleryAciklama = p.GalleryAciklama;
@@ -53,7 +53,7 @@ namespace Proje.Controllers
             TempData["Alert"] = "Başarıyla Güncellendi";
             db.Update(title);
             db.SaveChanges();
-            //TempData["mesaj"] = "Başarıyla Güncellendi";
+          
             return RedirectToAction("Titles");
         }
 
