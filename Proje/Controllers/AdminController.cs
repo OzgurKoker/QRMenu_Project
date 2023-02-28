@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
@@ -9,8 +10,10 @@ using System.Data.Common;
 
 namespace Proje.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
+
         public IActionResult Index()
         {
             return View();
@@ -53,7 +56,7 @@ namespace Proje.Controllers
             TempData["Alert"] = "Başarıyla Güncellendi";
             db.Update(title);
             db.SaveChanges();
-          
+
             return RedirectToAction("Titles");
         }
 
@@ -752,7 +755,7 @@ namespace Proje.Controllers
 
         public IActionResult KategoriSil(int id)
         {
-            Kategori k=db.Kategoris.FirstOrDefault(x => x.Id == id);
+            Kategori k = db.Kategoris.FirstOrDefault(x => x.Id == id);
             ViewBag.urunler = db.Uruns.Where(x => x.UrunKategoriId == id).ToList();
 
 
@@ -762,9 +765,9 @@ namespace Proje.Controllers
         public IActionResult KategoriSil(Kategori p)
         {
             Kategori k = db.Kategoris.AsQueryable().Include(x => x.Uruns).FirstOrDefault(x => x.Id == p.Id);
-       
+
             db.Remove(k);
-            db.SaveChanges(); 
+            db.SaveChanges();
 
 
             return RedirectToAction("Kategoriler");
@@ -851,7 +854,7 @@ namespace Proje.Controllers
         [HttpPost]
         public IActionResult UrunSil(Urun p)
         {
-            Urun u =db.Uruns.FirstOrDefault(x=>x.Id==p.Id);
+            Urun u = db.Uruns.FirstOrDefault(x => x.Id == p.Id);
             db.Remove(u);
             db.SaveChanges();
             TempData["Alert"] = "Başarıyla Güncellendi";

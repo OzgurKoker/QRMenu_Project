@@ -7,11 +7,11 @@
         <h3>@data.Baslik</h3>
         <p>@data.Aciklama</p>
         <div class="social-links">
-            <a href="@data.Icon1Link" class="twitter"><i class="bx bxl-@data.Icon1"></i></a>
-            <a href="@data.Icon2Link" class="facebook"><i class="bx bxl-@data.Icon2"></i></a>
-            <a href="@data.Icon3Link" class="instagram"><i class="bx bxl-@data.Icon3"></i></a>
-            <a href="@data.Icon4Link" class="google-plus"><i class="bx bxl-@data.Icon4"></i></a>
-            <a href="@data.Icon5Link" class="linkedin"><i class="bx bxl-@data.Icon5"></i></a>
+            <a href="@data.Icon1Link" class="twitter @(data.Icon1Link=="#" ? "d-none " : "")"><i class="bx bxl-@data.Icon1"></i></a>
+            <a href="@data.Icon2Link" class="facebook @(data.Icon2Link=="#" ? "d-none " : "")"><i class="bx bxl-@data.Icon2"></i></a>
+            <a href="@data.Icon3Link" class="instagram @(data.Icon3Link=="#" ? "d-none " : "")"><i class="bx bxl-@data.Icon3"></i></a>
+            <a href="@data.Icon4Link" class="google-plus @(data.Icon4Link=="#" ? "d-none " : "")"><i class="bx bxl-@data.Icon4"></i></a>
+            <a href="@data.Icon5Link" class="linkedin @(data.Icon5Link=="#" ? "d-none " : "")"><i class="bx bxl-@data.Icon5"></i></a>
         </div>
         <div class="copyright">
             &copy; Copyright <strong><span>Delicious</span></strong>. All Rights Reserved

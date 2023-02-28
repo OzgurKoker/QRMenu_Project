@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z6MLgUTji8HXXTPGRCtpyoLpWel59MK7x3MqVWJzwi8=",
+  "Hash": "prUryo9tML0MkBbU98Sz+YpYa76pEke/E3HJbwwtoe4=",
   "Source": "Proje",
   "BasePath": "_content/Proje",
   "Mode": "Default",
@@ -1445,6 +1445,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\18ae40f9048f40e483614244ee16c464.jpg"
     },
     {
+      "Identity": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\assets\\img\\4d7a004ee3cd4703a1b5b81e41fdfe88.jpg",
+      "SourceId": "Proje",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\",
+      "BasePath": "_content/Proje",
+      "RelativePath": "assets/img/4d7a004ee3cd4703a1b5b81e41fdfe88.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\4d7a004ee3cd4703a1b5b81e41fdfe88.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\assets\\img\\a4f6c9888a5c40e5954245749f352c5a.jpg",
       "SourceId": "Proje",
       "SourceType": "Discovered",
@@ -1802,6 +1819,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\gallery\\gallery-8.jpg"
     },
     {
+      "Identity": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\assets\\img\\slide\\0a46accf825b4ea3a63cfaa35da30554.jpg",
+      "SourceId": "Proje",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\",
+      "BasePath": "_content/Proje",
+      "RelativePath": "assets/img/slide/0a46accf825b4ea3a63cfaa35da30554.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\slide\\0a46accf825b4ea3a63cfaa35da30554.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\assets\\img\\slide\\52dfb1fd63d042ecb040bbc9164a000d.jpg",
       "SourceId": "Proje",
       "SourceType": "Discovered",
@@ -1817,6 +1851,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\slide\\52dfb1fd63d042ecb040bbc9164a000d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\assets\\img\\slide\\a30058a1c3794b25b586aba2a36f82c7.jpg",
+      "SourceId": "Proje",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\",
+      "BasePath": "_content/Proje",
+      "RelativePath": "assets/img/slide/a30058a1c3794b25b586aba2a36f82c7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\slide\\a30058a1c3794b25b586aba2a36f82c7.jpg"
     },
     {
       "Identity": "C:\\Users\\ozgur\\source\\repos\\Proje\\Proje\\wwwroot\\assets\\img\\slide\\slide-1.jpg",

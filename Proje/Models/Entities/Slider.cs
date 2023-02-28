@@ -9,6 +9,6 @@ namespace Proje.Models.Entities
         public string? Image { get; set; }
         public string? Baslik { get; set; }
         public string? Aciklama { get; set; }
-        public string? Hidden { get; set; }
+        public bool? Hidden { get; set; }
     }
 }

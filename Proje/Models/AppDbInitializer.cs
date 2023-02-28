@@ -41,30 +41,30 @@ namespace Proje.Models
                         Image="chefs-1.jpg",
                            Name="Walter Whiteaı",
                            Title="Master Chefa",
-                           Twitter="#",
-                           Facebook="#",
-                           Instagram="#",
-                           Linkedin="#"
+                           Twitter="#2",
+                           Facebook="#2",
+                           Instagram="#2",
+                           Linkedin="#2"
                         },
                        new Chef()
                         {
                            Image="chefs-2.jpg",
                            Name="Sarah Jhonson",
                            Title="Patissier",
-                           Twitter="#",
-                           Facebook="#",
-                           Instagram="#",
-                           Linkedin="#"
+                           Twitter="#2",
+                           Facebook="#2",
+                           Instagram="#2",
+                           Linkedin="#2"
                         },
                            new Chef()
                         {
                            Image="chefs-3.jpg",
                            Name="William Anderson",
                            Title="Patissier",
-                           Twitter="#",
-                           Facebook="#",
-                           Instagram="#",
-                           Linkedin="#"
+                           Twitter="#2",
+                           Facebook="#2",
+                           Instagram="#2",
+                           Linkedin="#2"
                         },
                     });
                     context.SaveChanges();
@@ -121,15 +121,15 @@ namespace Proje.Models
                      Baslik="Delicious",
                      Aciklama="Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.",
                      Icon1="twitter",
-                     Icon1Link="#",
+                     Icon1Link="#1",
                             Icon2="facebook",
-                     Icon2Link="#",
+                     Icon2Link="#2",
                             Icon3="instagram",
-                     Icon3Link="#",
+                     Icon3Link="#3",
                             Icon4="google",
-                     Icon4Link="#",
+                     Icon4Link="#4",
                             Icon5="linkedin",
-                     Icon5Link="#"
+                     Icon5Link="#4"
 
                         },
 
@@ -409,7 +409,7 @@ namespace Proje.Models
                         Telefon="0535 576 14 86",
                         Email="ozgur.koker17@gmail.com",
                         Adres="Eyüp Merkez, Feshane Cd. No:8, 34050 Eyüpsultan/İstanbul",
-                        Saat="Pzt-Pzr11:00 - 23:00"
+                        Saat="Pzt-Pzr 11:00 - 23:00"
                         },
 
                     });

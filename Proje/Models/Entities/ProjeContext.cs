@@ -314,9 +314,7 @@ namespace Proje.Models.Entities
                     .HasMaxLength(50)
                     .HasColumnName("baslik");
 
-                entity.Property(e => e.Hidden)
-                    .HasMaxLength(50)
-                    .HasColumnName("hidden");
+                entity.Property(e => e.Hidden).HasColumnName("hidden");
 
                 entity.Property(e => e.Image)
                     .HasMaxLength(50)

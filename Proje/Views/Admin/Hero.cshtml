@@ -8,7 +8,9 @@
     <div class="card">
         <h5 style="    display: flex;
     align-items: center;
-    justify-content: space-between;" class="card-header">Slider <a asp-controller="Admin" asp-action="HeroEkle"><button class="btn rounded-pill btn-dark" style="width:120px;">Ekle</button></a> </h5>
+    justify-content: space-between;" class="card-header">
+            Slider <a asp-controller="Admin" asp-action="HeroEkle"><button class="btn rounded-pill btn-dark" style="width:120px;">Ekle</button></a>
+        </h5>
         @if (TempData["Alert"] != null)
         {
             <div class="alert alert-success">
@@ -23,6 +25,7 @@
                         <th>Başlık</th>
                         <th>Açıklama</th>
                         <th>Düzenle/Sil</th>
+                
                     </tr>
                 </thead>
                 <tbody class="">
@@ -43,6 +46,7 @@
                                     </div>
                                 </div>
                             </td>
+                       
                         </tr>
                     }
                 </tbody>

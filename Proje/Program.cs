@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Proje.Models;
 using Proje.Models.Entities;
@@ -16,7 +19,14 @@ namespace Proje
             builder.Services.AddDbContext<ProjeContext>(
             options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
              );
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+            {
+                options.Cookie.Name = "session";
+                options.LoginPath = "/Home";
+            });
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -31,12 +41,14 @@ namespace Proje
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-            AppDbInitializer.Seed(app); 
+            AppDbInitializer.Seed(app);
             app.Run();
         }
     }
