@@ -1,3 +1,1 @@
-ConnectionStringi değiştirmeden veritabanını kurmayacak
-Models/Entities/ProjeContext içinde ve
-appsettings.json içindeki connection stringi değiştirerek çalıştırabilirsiniz
+ASP.NET Core MVC ve Entity Framework Core kullanarak yapmış olduğum bu Websitesinde gördüğünüz her şey websitesinin sahibi tarafından, admin panelini kullanarak değiştirilebiliyor. Dilediği gibi ekleyip, çıkartıp düzenleyebiliyor ve en önemli kısım qr-menü kısmı. Kafeleri menü maliyetinden kurtaracak olan bu sistem yaptığınız değişikliği anında menüye yansıttığı için güncellemek istediği ürünleri hemen güncelleyebiliyor.
